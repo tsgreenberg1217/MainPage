@@ -19,14 +19,14 @@ fun NavGraphBuilder.patternNavGraph(navController: NavController) {
         composable(KnitNavRoutes.PatternsRoutes.PatternFirst.route) {
 
             // gets from the root graph
-            val parentEntry = remember{
-                navController.getBackStackEntry(KnitNavRoutes.PatternsRoutes.PatternGraphRoot.route)
-            }
-            val vm = hiltViewModel<MainPageViewModel>(parentEntry)
+//            val parentEntry = remember{
+//                navController.getBackStackEntry(KnitNavRoutes.PatternsRoutes.PatternGraphRoot.route)
+//            }
+//            val vm = hiltViewModel<MainPageViewModel>(parentEntry)
 //            val vm = viewModel<MainPageViewModel>()
-            Log.d("ViewModel test", "${vm}")
+//            Log.d("ViewModel test", "${vm}")
             DummyNavView(routeToGoTo = KnitNavRoutes.PatternsRoutes.PatternSecond.route) {
-                navController.navigate(it)
+//                navController.navigate(it)
             }
 
         }
@@ -39,7 +39,7 @@ fun NavGraphBuilder.patternNavGraph(navController: NavController) {
 //            val vm = viewModel<MainPageViewModel>()
             Log.d("ViewModel test", "${vm}")
             DummyNavView(routeToGoTo = KnitNavRoutes.PatternsRoutes.PatternFirst.route) {
-                navController.popBackStack(it, false, false)
+//                navController.popBackStack(it, false, false)
             }
         }
     }

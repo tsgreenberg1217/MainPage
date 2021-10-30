@@ -16,14 +16,11 @@ fun MainKnitingPage(
     navController: NavHostController,
     viewModel: MainPageViewModel
 ) {
-//    val bs = navController
-//        .currentBackStackEntryFlow
-//        .collectAsState(initial = navController.currentBackStackEntry)
-//    Log.d("Backstack test", "$bs")
     NavHost(
         navController = navController,
         startDestination = KnitNavRoutes.PatternsRoutes.PatternGraphRoot.route,
-        Modifier.padding(12.dp)
+        route = "ROOT OF ROOTS",
+        modifier = Modifier.padding(12.dp)
     ) {
         patternNavGraph(navController)
         tutorialNavGraph(navController)
